@@ -18,9 +18,9 @@ The explicit state of an element can look something like this.
 -------------------------------------------
 ```
 
-That is, almost all states of an element affect the elements attributes or properties, but not all of these effect the `element`s style.  so there are three possible scopes of an `element`s state: visual-only, visual-data, data-only.
+That is, almost all states of an element affect the elements attributes or properties, but not all of these affect the `element`s style.  so there are three possible scopes of an `element`s state: visual-only, visual-data, data-only.
 
-The other caveat is that`states` concerning styles can only be boolean - either on or off - whereas non-visual states are multi-dimensional. 
+The other caveat is that`states` concerning styles can only be boolean - either on or off - whereas non-visual states can contain any potential value. 
 
 `state` can be injected or called manually.
 
