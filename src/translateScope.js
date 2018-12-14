@@ -6,6 +6,9 @@ var el = {};
 			case '':
 			    return ['class', 'attribute'];
 			break;
+			case undefined:
+				return ['class', 'attribute'];
+			break;
 			case 'visual-data':
 			    return ['class', 'attribute'];
 			break;

@@ -36,14 +36,16 @@
         </style>
         
     </head>
-
     <body>
+
+        <div id="box" onclick="changeState(event)" style="border:3px solid #000; height: 100px; width: 200px;"></div>
 
         <script src="./../src/js-elements/js-elements.js"></script>
         <script src="../src/js-elements/addAttribute.js"></script>
         <script src="../src/js-elements/addClass.js"></script>
         <script src="../src/js-elements/removeAttribute.js"></script>
         <script src="../src/js-elements/removeClass.js"></script>
+        <script src="../src/js-elements/hasClass.js"></script>
         <script src="../src/js-elements/index.js"></script>
         
         <!-- scripts -->
@@ -52,6 +54,16 @@
         <script src="../src/updateState.js"></script>
 
         <script src="../index.js"></script>
+
+
+        <script>
+            var div = document.querySelector('#box');
+            console.log(div);
+
+            function changeState(event) {
+                state(div).update('active');
+            }
+        </script>
 
     </body>
 

@@ -1,9 +1,5 @@
 (($el) =>  {
 
-	if (!$el) {
-		$el = {};
-	}
-
 	$el.addAttribute = addAttribute;
 
 	/**
@@ -22,4 +18,4 @@
 
 	};
 
-})();
+})($el);

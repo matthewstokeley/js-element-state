@@ -35,7 +35,7 @@ var state = function(element) {
 		 * @return {[type]}           [description]
 		 */
 		update: function(state, value, scope) {
-			updateState(stateManager, state, value, scope);
+			el.updateState(stateManager, state, value, scope);
 			return this;
 		},
 		setName: function(name) {
