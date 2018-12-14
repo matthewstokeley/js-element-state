@@ -1,21 +1,25 @@
 (function(el) {
 	var updateState = (stateManager, state, value, scope, remove) => {
 		
-		var scope = el.translateScope(scope);
+		var scopes = el.translateScope(scope);
 		stateManager.setCurrentState(state);
 		var setOptions = () => { return remove ? stateManager.removeOption(state) : !stateManager.hasOption(state) ? stateManager.addOption(state) : '' }
 		
 		setOptions();
 		
-		scope.forEach((value) => {
-			switch (value) {
+		scopes.forEach((scope) => {
+			switch (scope) {
 				case 'class':
-					stateManager.hasClass(state) ? stateManager.removeClass(state) : stateManager.addCLass(state);
+					stateManager.hasClass(state) ? stateManager.removeClass(state) : stateManager.addClass(state);
 				break;
 				case 'attribute':
-					stateManager.setAttribute(state, value);				
+					if (!value) {
+						stateManager.hasAttribute(state) ? stateManager.removeAttribute(state) : stateManager.addAttribute(state, 'true');
+					} else {
+						stateManager.setAttribute(state, value);
+					}
 				break;
-			}	
+			}
 		})
 	}
 

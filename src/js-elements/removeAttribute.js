@@ -1,7 +1,5 @@
 (($el) => {
 
-	$el.removeAttribute = removeAttribute;
-
 	/**
 	 * [removeClass description]
 	 * @param  {[type]} element   [description]
@@ -17,5 +15,7 @@
 	    return element;
 
 	};
+
+	$el.removeAttribute = removeAttribute;
 
 })($el);

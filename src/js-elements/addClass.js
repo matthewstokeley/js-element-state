@@ -1,8 +1,5 @@
 (($el) => {
 
-
-	$el.addClass = addClass;
-
 	/**
 	 * [addClass description]
 	 * @param {[type]} element   [description]
@@ -20,6 +17,8 @@
 	    return element;
 
 	};
+
+	$el.addClass = addClass;
 
 
 })($el);

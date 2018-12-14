@@ -58,11 +58,12 @@
 
         <script>
             var div = document.querySelector('#box');
-            console.log(div);
 
             function changeState(event) {
-                state(div).update('active');
+                console.log(state(div).update('active', 'clicked').getStateManager());
             }
+
+
         </script>
 
     </body>

@@ -38,10 +38,14 @@ var state = function(element) {
 			el.updateState(stateManager, state, value, scope);
 			return this;
 		},
+		toggle: function(state) {
+			// ...	
+		},
 		setName: function(name) {
 			stateManager.setName(name);
 			return this;
 		},
+		getStateManager: function() { return stateManager },
 		states: []
 
 	}
