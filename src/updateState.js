@@ -8,20 +8,17 @@
 		setOptions();
 		
 		scope.forEach((value) => {
-			switch value {
-				case 'class'
+			switch (value) {
+				case 'class':
 					stateManager.hasClass(state) ? stateManager.removeClass(state) : stateManager.addCLass(state);
 				break;
-				case 'attribute'
+				case 'attribute':
 					stateManager.setAttribute(state, value);				
 				break;
 			}	
 		})
 	}
 
-	if (!el) {
-		el = {};
-	}
 	el.updateState = updateState;
 
 })(el);

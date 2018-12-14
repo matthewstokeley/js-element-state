@@ -1,23 +1,21 @@
+var el = {};
+
 (function(el) {
 	var translateScope = (scope) => {
-		switch scope {
-			case undefined || ''
+		switch (scope) {
+			case '':
 			    return ['class', 'attribute'];
 			break;
-			case 'visual-data'
+			case 'visual-data':
 			    return ['class', 'attribute'];
 			break;
-			case 'data'
+			case 'data':
 			    return ['attribute'];
 			break;
-			case 'visual'
+			case 'visual':
 			    return ['class'];
 			break;
 		}
-	}
-
-	if (!el) {
-		el = {};
 	}
 
 	el.translateScope = translateScope;

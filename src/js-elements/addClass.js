@@ -1,8 +1,5 @@
 (($el) => {
 
-	if (!$el) {
-		$el = {};
-	}
 
 	$el.addClass = addClass;
 
@@ -23,5 +20,6 @@
 	    return element;
 
 	};
+
 
 })($el);

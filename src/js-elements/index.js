@@ -1,10 +1,10 @@
 var element = (element) => {
 
 	return {
-		addClass: (className) => { return $$.addClass(element, className) },
-		removeClass: (className) => { return $$.removeClass(element, className); },
-		addAttribute: (attribute, value) => { return $$.addAttribute(element, attribute, value); },
-		removeAttribute: (attribute, value) => { return $$.removeAttribute(element, attribute, value); }
+		addClass: (className) => { return $el.addClass(element, className) },
+		removeClass: (className) => { return $el.removeClass(element, className); },
+		addAttribute: (attribute, value) => { return $el.addAttribute(element, attribute, value); },
+		removeAttribute: (attribute, value) => { return $el.removeAttribute(element, attribute, value); }
 	}
 
 }

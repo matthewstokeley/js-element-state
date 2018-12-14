@@ -1,9 +1,5 @@
 (($el) => {
 
-	if (!$el) {
-		$el = {};
-	}
-
 	$el.removeAttribute = removeAttribute;
 
 	/**
