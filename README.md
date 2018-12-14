@@ -8,12 +8,15 @@ Non-explicit state change can be confusing at first glance, and I have built app
 
 The explicit state of an element can look something like this.
 
+```
+-------------------------------------------
 | state       | visual    | attribute     |
 -------------------------------------------
 | 'active'    | true      | true          |
 | 'available' | false     | true          |
 | 'loaded'    | t||f      | true          |
-
+-------------------------------------------
+```
 
 That is, almost all states of an element affect the elements attributes or properties, but not all of these effect the `element`s style.  so there are three possible scopes of an `element`s state: visual-only, visual-data, data-only.
 
