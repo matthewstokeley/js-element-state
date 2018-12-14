@@ -1,7 +1,4 @@
-import from './src/StateManager';
-import from './src/updateState';
-
-export default var state = function(element) {
+var state = function(element) {
 
 	var stateManager = new StateManager({
 		element: element,

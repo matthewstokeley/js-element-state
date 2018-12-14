@@ -1,4 +1,5 @@
-export default var translateScope = (scope) => {
+(function(el) {
+	var translateScope = (scope) => {
 		switch scope {
 			case undefined || ''
 			    return ['class', 'attribute'];
@@ -12,5 +13,13 @@ export default var translateScope = (scope) => {
 			case 'visual'
 			    return ['class'];
 			break;
+		}
 	}
-}
+
+	if (!el) {
+		el = {};
+	}
+
+	el.translateScope = translateScope;
+
+})(el)
