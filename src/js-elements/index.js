@@ -1,15 +1,18 @@
-import './addClass';
-import './removeClass';
-import './addAttribute';
-import './removeAttribute';
-
-export default var elements = (element) => {
+var element = (element) => {
 
 	return {
-		addClass: (className) => { return addClass(element, className) },
-		removeClass: (className) => { return removeClass(element, className); },
-		addAttribute: (attribute, value) => { return addAttribute(element, attribute, value); },
-		removeAttribute: (attribute, value) => { return removeAttribute(element, attribute, value); }
+		addClass: (className) => { return $el.addClass(element, className) },
+		removeClass: (className) => { return $el.removeClass(element, className); },
+		hasClass: (className) => { return $el.hasClass(element, className); },
+		addAttribute: (attribute, value) => { return $el.addAttribute(element, attribute, value); },
+		removeAttribute: (attribute, value) => { return $el.removeAttribute(element, attribute, value); }
 	}
 
+}
+
+
+// if jQuery isn't available, 
+// here is a poor substitution
+if (!$) {
+	var $ = element;
 }

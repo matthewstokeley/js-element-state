@@ -4,7 +4,7 @@
 
 Non-explicit state change can be confusing at first glance, and I have built applications that handle state completely with an object's `controller`, and with a confusing mix of css and `model` `properties`.
 
-`state` agrees with the popular idea that the markup is the model, and that `element`'s have two browser-native `api`'s handling the state of the element - the `classList` api - css classes - and the `dataset` object - data attributes.  `classes` are states that determine something visual and `data` attributes determine not-necessarily visual properties. However, `classes` are not necessarily a subset of `attributes`.
+`state` agrees with the popular idea that the markup is the model. `element`'s have two browser-native `api`'s handling the state of the element - the `classList` api - css classes - and the `dataset` object - data attributes.  `classes` are states that determine something visual and `data` attributes determine not-necessarily visual properties. However, `classes` are not necessarily a subset of `attributes`.
 
 The explicit state of an element can look something like this.
 

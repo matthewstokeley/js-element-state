@@ -1,7 +1,4 @@
-import from './src/StateManager';
-import from './src/updateState';
-
-export default var state = function(element) {
+var state = function(element) {
 
 	var stateManager = new StateManager({
 		element: element,
@@ -38,13 +35,17 @@ export default var state = function(element) {
 		 * @return {[type]}           [description]
 		 */
 		update: function(state, value, scope) {
-			updateState(stateManager, state, value, scope);
+			el.updateState(stateManager, state, value, scope);
 			return this;
+		},
+		toggle: function(state) {
+			// ...	
 		},
 		setName: function(name) {
 			stateManager.setName(name);
 			return this;
 		},
+		getStateManager: function() { return stateManager },
 		states: []
 
 	}

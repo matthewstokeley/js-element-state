@@ -1,8 +1,4 @@
-// i am avoiding using the quasi reserved $ symbol, which is conventionally used by multiple libraries, most notably jQuery and angular, to indicate an element. 
-// the double $$ indicates that the function is an element, while not conflicting with other libraries.  
-import { elements as $$ } from './js-elements/index';
-
-export default class StateManager {
+class StateManager {
 	
 	constructor(options) {
 		this.element = options.element;
@@ -17,12 +13,12 @@ export default class StateManager {
     setCurrentState(state) { this.current = state; return this; }
     getCurrentState() { return this.state; }
 
-    addClass(element, state) { $$(element).addClass(state); }
-    removeClass(element, state) { $$(element).removeClass(state); }
-    hasClass(element, state) { $$(element).hasClass(state); }
+    addClass(state) { $(this.element).addClass(state); }
+    removeClass(state) { $(this.element).removeClass(state); }
+    hasClass(state) { $(this.element).hasClass(state); }
 
-    addAttribute(element, state, value) { $$(element).addAttribute(state, value); }
-    removeAttribte(element, state) { $$(element).addAttribute(state, value) = ''; }
+    setAttribute(state, value) { $(this.element).addAttribute(state, value); }
+    removeAttribte(state) { $(this.element).removeAttribute(state, value) = ''; }
 
     addOption(state) { this.options.push(state); }
     removeOption(state) { 

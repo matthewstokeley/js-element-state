@@ -1,17 +1,24 @@
-/**
- * [addClass description]
- * @param {[type]} element   [description]
- * @param {[type]} className [description]
- */
+(($el) => {
 
-var addClass = function(element, className) {
+	/**
+	 * [addClass description]
+	 * @param {[type]} element   [description]
+	 * @param {[type]} className [description]
+	 */
 
-    if (element.classList && element.classList.add) {
-        element.classList.add(className);
-    } else if (element.className) {
-        element.className = element.className + ' ' + className;
-    }
+	var addClass = function(element, className) {
 
-    return element;
+	    if (element.classList && element.classList.add) {
+	        element.classList.add(className);
+	    } else if (element.className) {
+	        element.className = element.className + ' ' + className;
+	    }
 
-};
+	    return element;
+
+	};
+
+	$el.addClass = addClass;
+
+
+})($el);

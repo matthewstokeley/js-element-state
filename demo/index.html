@@ -32,23 +32,52 @@
            html, body {
               margin: 0; padding: 0; font: 10px Arial, sans-serif; 
            }
+
+            div {
+                background-color: #fff;
+                margin: 5rem auto;
+                border:3px solid #000; height: 100px; width: 200px;
+                cursor: pointer;
+            }
+
+           .active {
+                transition: 0.2s;
+                border-color: coral;
+                background-color: coral;
+           }
            
         </style>
         
     </head>
-
     <body>
 
-        <script type="module" src="../src/js-elements/addAttribute.js"></script>
-        <script type="module" src="../src/js-elements/addClass.js"></script>
-        <script type="module" src="../src/js-elements/removeAttribute.js"></script>
-        <script type="module" src="../src/js-elements/removeClass.js"></script>
-        <script type="module" src="../src/js-elements/index.js"></script>
+        <div id="box" onclick="changeState(event)" style=""></div>
+
+        <script src="./../src/js-elements/js-elements.js"></script>
+        <script src="../src/js-elements/addAttribute.js"></script>
+        <script src="../src/js-elements/addClass.js"></script>
+        <script src="../src/js-elements/removeAttribute.js"></script>
+        <script src="../src/js-elements/removeClass.js"></script>
+        <script src="../src/js-elements/hasClass.js"></script>
+        <script src="../src/js-elements/index.js"></script>
         
         <!-- scripts -->
-        <script type="module" src="../src/StateManager.js"></script>
-        <script type="module" src="../src/translateScope.js"></script>
-        <script type="module" src="../src/updateScope.js"></script>
+        <script src="../src/StateManager.js"></script>
+        <script src="../src/translateScope.js"></script>
+        <script src="../src/updateState.js"></script>
+
+        <script src="../index.js"></script>
+
+
+        <script>
+            var div = document.querySelector('#box');
+
+            function changeState(event) {
+                console.log(state(div).update('active', 'clicked').getStateManager());
+            }
+
+
+        </script>
 
     </body>
 
