@@ -22,7 +22,7 @@ The explicit state of an element can look something like this.
 
 ```
 class Controller {
-	constructor() {
+	constructor(options) {
 		this.state = options.state
 	}
 
